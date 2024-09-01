@@ -1,0 +1,16 @@
+.container {
+  padding-top: 50px;
+}
+.pointer {
+  position: absolute;
+  background-color: var(--gray-bright);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  left: -15px;
+  top: -15px;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: display 1000ms ease-in-out;
+  z-index: 1001;
+}

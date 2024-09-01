@@ -1,0 +1,40 @@
+:root {
+  --black: #212529;
+  --white: #f8f9fa;
+  --dark: #343a40;
+  --second: #495057;
+  --mid: #6c757d;
+  --gray: #adb5bd;
+  --gray-bright: #ced4da;
+  --birght: #dee2e6;
+  --light: #e9ecef;
+}
+
+h1 {
+  font-size: 28px;
+}
+.App {
+  position: relative;
+  font-family: "Poppins", system-ui;
+}
+
+.headline {
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+.pointer {
+  position: absolute;
+  background-color: var(--gray-bright);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  left: -15px;
+  top: -15px;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: display 1000ms ease-in-out;
+  z-index: 1001;
+}

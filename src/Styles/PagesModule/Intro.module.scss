@@ -1,0 +1,21 @@
+.contents {
+  font-family: "Playfair Display", system-ui;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headline {
+  margin-top: 15px;
+  font-optical-sizing: auto;
+  font-size: 82px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--mid);
+}
+.desline {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--light);
+  letter-spacing: 1px;
+  transform: translateY(-15px);
+}

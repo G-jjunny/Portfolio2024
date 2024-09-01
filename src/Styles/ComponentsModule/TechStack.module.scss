@@ -1,0 +1,40 @@
+.container {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.headline {
+  font-family: "Playfair Display", system-ui;
+  font-optical-sizing: auto;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--gray-bright);
+}
+.TechName {
+  font-size: 34px;
+  margin-top: 40px;
+}
+.TechDes {
+  font-size: 16px;
+  margin-top: 20px;
+  li {
+    line-height: 22px;
+    padding-left: 35px;
+    position: relative;
+    margin: 10px 0;
+  }
+  li::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 15px;
+    height: 5px;
+    background-color: var(--mid);
+  }
+}
+
+.techNode {
+  display: flex;
+  gap: 10px;
+}

@@ -55,7 +55,7 @@ const TechDescription: React.FC<Description> = ({
             <div className="icon">
               <Icon icon={`skill-icons:${item.toLowerCase()}`} />
             </div>
-            <div className="iconName">{item}</div>
+            <div className="iconName">{item.split("-")[0]}</div>
           </TechNode>
         ))}
       </div>
@@ -73,14 +73,23 @@ const TechStack: React.FC = () => {
           "React를 사용하여 사용자 인터페이스를 구축하고, 컴포넌트 기반 아키텍처를 통해 재사용성과 유지보수성을 강조하기 위하여 지속적인 노력을 하고있습니다.",
           "React를 사용하여 사용자 인터페이스를 구축하고, 컴포넌트 기반 아키텍처를 통해 재사용성과 유지보수성을 강조하기 위하여 지속적인 노력을 하고있습니다.",
         ]}
-        nodes={["HTML", "CSS", "JavaScript", "TypeScript", "NodeJS-light"]}
+        nodes={[
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "Redux",
+          "NodeJS-light",
+          "Postman",
+          "StyledComponents",
+          "Sass",
+          "Bootstrap",
+          "MaterialUI-light",
+        ]}
       />
       <TechDescription
         techName="Design & Tool."
-        techDes={[
-          "Sketch와 Figma를 사용하여 UI/UX 디자인을 수행하고 있습니다.",
-          "Adobe XD를 통해 인터랙티브한 프로토타이핑을 진행하고 있습니다.",
-        ]}
+        techDes={["Figma를 사용하여 UI/UX 디자인을 수행하고 있습니다."]}
         nodes={["Figma-light"]}
       />
     </div>

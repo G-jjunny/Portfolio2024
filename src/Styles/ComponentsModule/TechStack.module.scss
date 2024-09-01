@@ -27,6 +27,7 @@
   li::after {
     position: absolute;
     left: 0;
+    top: calc(50% - 2px);
     content: "";
     width: 15px;
     height: 5px;
@@ -36,5 +37,6 @@
 
 .techNode {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../Styles/PagesModule/Information.module.scss";
 import Profile from "../../Assets/Images/이력서사진.jpg";
 import TechStack from "./TechStack";
+import Project from "./Project";
 
 const Information = () => {
   return (
@@ -41,6 +42,7 @@ const Information = () => {
             </div>
           </div>
           <TechStack />
+          <Project />
         </div>
       </div>
     </div>

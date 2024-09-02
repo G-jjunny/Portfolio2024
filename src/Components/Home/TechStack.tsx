@@ -53,7 +53,7 @@ const TechDescription: React.FC<Description> = ({
         {nodes.map((item, index) => (
           <TechNode key={index}>
             <div className="icon">
-              <Icon icon={`skill-icons:${item.toLowerCase()}`} />
+              <Icon icon={`devicon:${item.toLowerCase()}`} />
             </div>
             <div className="iconName">{item.split("-")[0]}</div>
           </TechNode>
@@ -74,23 +74,27 @@ const TechStack: React.FC = () => {
           "React를 사용하여 사용자 인터페이스를 구축하고, 컴포넌트 기반 아키텍처를 통해 재사용성과 유지보수성을 강조하기 위하여 지속적인 노력을 하고있습니다.",
         ]}
         nodes={[
-          "HTML",
-          "CSS",
+          "HTML5",
+          "CSS3",
           "JavaScript",
           "TypeScript",
+          "React",
+          "ViteJS",
           "Redux",
-          "NodeJS-light",
+          "NodeJS",
+          "MongoDB",
           "Postman",
           "StyledComponents",
           "Sass",
           "Bootstrap",
-          "MaterialUI-light",
+          "MaterialUI",
+          "antDesign",
         ]}
       />
       <TechDescription
         techName="Design & Tool."
         techDes={["Figma를 사용하여 UI/UX 디자인을 수행하고 있습니다."]}
-        nodes={["Figma-light"]}
+        nodes={["Figma", "vscode", "Netlify"]}
       />
     </div>
   );

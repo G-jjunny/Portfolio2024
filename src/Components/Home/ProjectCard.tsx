@@ -9,7 +9,7 @@ const CardComponents = styled.div`
 `;
 
 const ProjectCard = () => {
-  return <CardComponents>ProjectCard</CardComponents>;
+  return <CardComponents></CardComponents>;
 };
 
 export default ProjectCard;

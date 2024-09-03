@@ -3,6 +3,7 @@ import styles from "../../Styles/PagesModule/Information.module.scss";
 import Profile from "../../Assets/Images/이력서사진.jpg";
 import TechStack from "./TechStack";
 import Project from "./Project";
+import Education from "./Education";
 
 const Information = () => {
   return (
@@ -43,6 +44,7 @@ const Information = () => {
           </div>
           <TechStack />
           <Project />
+          <Education />
         </div>
       </div>
     </div>

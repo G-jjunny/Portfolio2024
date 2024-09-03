@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans KR", system-ui;
+}
+.contents {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

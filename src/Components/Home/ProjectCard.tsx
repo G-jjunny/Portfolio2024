@@ -1,12 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import WoodOne from "../../Assets/Images/ProjectImg/woodone_Project_Img.png";
 
 const CardComponents = styled.div`
   position: relative;
   background-color: var(--black);
   width: 300px;
-  height: 100%;
+  aspect-ratio: 3/4;
   border-radius: 10px;
   color: var(--gray-bright);
   transition: all.3s;
@@ -44,7 +44,7 @@ const CardComponents = styled.div`
   /* card 내용 관련 css */
   .projectImg {
     width: 100%;
-    height: 50%;
+    height: 45%;
     display: flex;
     justify-content: center;
     img {
@@ -70,6 +70,8 @@ const CardComponents = styled.div`
   }
 `;
 const MoreBtn = styled.button`
+  width: 100%;
+
   background-color: transparent;
   border-radius: 10px;
   color: var(--white);
@@ -86,19 +88,23 @@ interface CardTypes {
   projectName: string;
   projectDes: string;
   projectImg: string;
+  siteLink: string;
+  gitLink: string;
 }
 
 const ProjectCard: React.FC<CardTypes> = ({
   projectName,
   projectDes,
   projectImg,
+  siteLink,
+  gitLink,
 }) => {
   return (
     <CardComponents>
       <div className="card initialCard">
         <div className="projectImg">
           {/* 이미지 쿠가해야함 */}
-          <img src={WoodOne} alt="woodone" />
+          {projectImg.length > 0 && <img src={projectImg} alt="woodone" />}
         </div>
         <div className="projectName">{projectName}</div>
         <div className="desLineKor projectDes">{projectDes}</div>
@@ -107,7 +113,15 @@ const ProjectCard: React.FC<CardTypes> = ({
         <div className="projectName">{projectName}</div>
         <div className="moreBtn">
           <MoreBtn>자세히보기</MoreBtn>
-          <MoreBtn>Github</MoreBtn>
+          {siteLink.length > 0 ? (
+            <Link to={siteLink} target="_Blank">
+              <MoreBtn>사이트 이동</MoreBtn>
+            </Link>
+          ) : (
+            <Link to={gitLink} target="_Blank">
+              <MoreBtn>Github</MoreBtn>
+            </Link>
+          )}
         </div>
       </div>
     </CardComponents>

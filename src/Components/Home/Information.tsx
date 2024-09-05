@@ -1,50 +1,111 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "../../Styles/PagesModule/Information.module.scss";
-import Profile from "../../Assets/Images/이력서사진.jpg";
 import TechStack from "./TechStack";
 import Project from "./Project";
 import Education from "./Education";
+import Profile from "./Profile";
 
 const Information = () => {
+  const [activeSection, setActiveSection] = useState<string>("Main");
+
+  // Section references for each section in the contents
+  const profileRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
+  const educationRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to specific section when the corresponding nav item is clicked
+  const handleNavClick = (section: string) => {
+    let targetRef;
+    switch (section) {
+      case "Main":
+        targetRef = profileRef;
+        break;
+      case "Project":
+        targetRef = projectRef;
+        break;
+      case "Education":
+        targetRef = educationRef;
+        break;
+    }
+    if (targetRef?.current) {
+      targetRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  useEffect(() => {
+    const sections = [
+      { id: "Main", ref: profileRef },
+      { id: "Project", ref: projectRef },
+      { id: "Education", ref: educationRef },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const active = sections.find(
+              (section) => section.ref.current === entry.target
+            );
+            if (active) {
+              setActiveSection(active.id);
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => {
+      if (section.ref.current) {
+        observer.observe(section.ref.current);
+      }
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section.ref.current) {
+          observer.unobserve(section.ref.current);
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.layout}>
         <div className={styles.sideNav}>
           <ul className={styles.nav}>
-            <li>Main</li>
-            <li>Project</li>
-            <li>Education</li>
+            <li
+              className={activeSection === "Main" ? styles.active : ""}
+              onClick={() => handleNavClick("Main")}
+            >
+              Main
+            </li>
+            <li
+              className={activeSection === "Project" ? styles.active : ""}
+              onClick={() => handleNavClick("Project")}
+            >
+              Project
+            </li>
+            <li
+              className={activeSection === "Education" ? styles.active : ""}
+              onClick={() => handleNavClick("Education")}
+            >
+              Education
+            </li>
           </ul>
         </div>
         <div className={styles.contents}>
-          <div className={styles.profile}>
-            <div className={styles.avatar}>
-              <img src={Profile} alt="profile" />
-            </div>
-            <div className={styles.profileDes}>
-              <div className={styles.name}>정경준</div>
-              <div className={styles.birth}>1998.10.31</div>
-              <div className={styles.desTechs}>
-                <div className={styles.tech}>Front-End Developer</div>
-                <div className={styles.tech}>React.js</div>
-              </div>
-              <div className={styles.des}>
-                <p>
-                  저의 목표는 항상 새로운 시도를 두려워하지 않는 프론트엔드
-                  개발자, 사람들의 기억에 남을 수 있는 웹을 만드는 것이
-                  목표입니다.
-                </p>
-                <p>React를 주로 활용하여 웹 애플리케이션을 개발하며</p>
-                <p>
-                  협업과 유지보수에 좋은 코드를 짜기 위해 꾸준히 학습하고
-                  있습니다.
-                </p>
-              </div>
-            </div>
+          <div ref={profileRef}>
+            <Profile />
+            <TechStack />
           </div>
-          <TechStack />
-          <Project />
-          <Education />
+          <div ref={projectRef}>
+            <Project />
+          </div>
+          <div ref={educationRef}>
+            <Education />
+          </div>
         </div>
       </div>
     </div>

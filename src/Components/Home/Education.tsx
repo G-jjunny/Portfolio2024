@@ -5,7 +5,7 @@ import { Icon } from "@iconify-icon/react";
 
 const StyledCard = styled.div`
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   /* aspect-ratio: 1/1; */
   padding: 20px;
   background-color: var(--second);
@@ -15,9 +15,10 @@ const StyledCard = styled.div`
   gap: 20px;
 
   text-align: start;
-  color: var(--mid);
+  color: var(--gray);
 
   .category {
+    min-height: 100px;
     color: var(--white);
     font-weight: 700;
     display: flex;
@@ -114,7 +115,9 @@ const Edu: React.FC<CardType> = ({
       </div>
       <ul className="description">
         {contents.map((item, index) => (
-          <li key={index}>- {item}</li>
+          <li className="desLineKor" key={index}>
+            - {item}
+          </li>
         ))}
       </ul>
       <div className="skills">
@@ -140,7 +143,10 @@ const Education = () => {
           day="2024.04 ~ 2024.08"
           groupName="엘리스"
           groupDes={["엘리스 프론트엔드&백엔드 웹 개발자 트랙 수료"]}
-          contents={[""]}
+          contents={[
+            "프론트엔드 개발에 필요한 전반적인 기술을 학습",
+            "2번의 팀 프로젝트를 진행하며 백엔드 및 팀원들과 협업하는 과정을 경험",
+          ]}
           skills={[
             "HTML5",
             "CSS3",
@@ -161,8 +167,9 @@ const Education = () => {
             "부전공 : 빅데이터 의료융합학",
           ]}
           contents={[
-            "자료구조 ,데이터베이스 등 CS지식 및 프로그래밍 언어 학습",
-            "자료구조 ,데이터베이스 등 CS지식 및 프로그래밍 언어 학습",
+            "자료구조, 데이터베이스 등 CS지식 및 프로그래밍 언어 학습",
+            "부전공으로 R을 이용한 빅데이터 분석 및 머신러닝 학습",
+            "사제동행형 산학협력 프로젝트 팀장으로 활동 프론트엔드 개발",
           ]}
           skills={[
             "HTML5",

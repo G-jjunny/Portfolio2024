@@ -71,7 +71,7 @@ const TechStack: React.FC = () => {
         techName="Dev Tech."
         techDes={[
           "React를 사용하여 사용자 인터페이스를 구축하고, 컴포넌트 기반 아키텍처를 통해 재사용성과 유지보수성을 강조하기 위하여 지속적인 노력을 하고있습니다.",
-          "React를 사용하여 사용자 인터페이스를 구축하고, 컴포넌트 기반 아키텍처를 통해 재사용성과 유지보수성을 강조하기 위하여 지속적인 노력을 하고있습니다.",
+          "CSS, SCSS, Styled-Components 등을 통해 디자인 결과물과 흡사하게 웹에 구현에 어려움이 없으며 반응형 웹 개발이 가능합니다.",
         ]}
         nodes={[
           "HTML5",
@@ -93,7 +93,11 @@ const TechStack: React.FC = () => {
       />
       <TechDescription
         techName="Design & Tool."
-        techDes={["Figma를 사용하여 UI/UX 디자인을 수행하고 있습니다."]}
+        techDes={[
+          "프로그래밍 능력에 더해 UI/UX 설계를 위해 Figma를 사용할 수 있습니다",
+          "코드 에디터로는 Visual Studio Code를 활용하여 작업을 하고있으며,",
+          "협업 도구로는 Git을 기반으로한 GitHub플랫폼을 사용하여 프로젝트 관리를 하고있습니다.",
+        ]}
         nodes={["Figma", "vscode", "Netlify"]}
       />
     </div>

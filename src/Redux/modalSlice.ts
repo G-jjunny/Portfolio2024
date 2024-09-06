@@ -32,11 +32,11 @@ const modalSlice = createSlice({
     },
     closeModal: (state) => {
       state.isOpen = false;
-      //   state.projectName = "";
-      //   state.projectDes = "";
-      //   state.projectImg = "";
-      //   state.siteLink = "";
-      //   state.gitLink = "";
+      state.projectName = "";
+      state.projectDes = "";
+      state.projectImg = "";
+      state.siteLink = "";
+      state.gitLink = "";
     },
   },
 });

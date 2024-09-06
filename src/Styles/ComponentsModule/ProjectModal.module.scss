@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  min-width: 400px;
+  height: 100vh;
+  position: relative;
+  padding: 20px;
+  background-color: red;
+}
+
+.closeBtn {
+  position: absolute;
+  z-index: 1;
+  right: -100px;
+  top: 0;
+}

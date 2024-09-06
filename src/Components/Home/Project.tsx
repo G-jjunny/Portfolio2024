@@ -14,6 +14,7 @@ const Project: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.headline}>Project</div>
       <div className={styles.contents}>
+        <ProjectModal />
         <ProjectCard
           projectImg={""}
           projectName="Sky-Maestro"

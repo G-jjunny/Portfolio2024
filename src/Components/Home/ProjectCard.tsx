@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { openModal } from "../../Redux/modalSlice";
+import ProjectModal from "../ProjectModal";
 
 const CardComponents = styled.div`
   position: relative;
@@ -99,14 +102,20 @@ const ProjectCard: React.FC<CardTypes> = ({
   siteLink,
   gitLink,
 }) => {
-  const handleToggleModal = () => {};
+  // modal 상태 관련
+  const dispatch = useDispatch();
+  const handleToggleModal = () => {
+    dispatch(
+      openModal({ projectName, projectDes, projectImg, siteLink, gitLink })
+    );
+  };
 
   return (
     <>
       <CardComponents>
         <div className="card initialCard">
           <div className="projectImg">
-            {/* 이미지 쿠가해야함 */}
+            {/* 이미지 추가해야함 */}
             {projectImg.length > 0 && <img src={projectImg} alt="woodone" />}
           </div>
           <div className="projectName">{projectName}</div>

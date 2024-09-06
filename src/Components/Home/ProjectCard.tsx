@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -99,32 +99,36 @@ const ProjectCard: React.FC<CardTypes> = ({
   siteLink,
   gitLink,
 }) => {
+  const handleToggleModal = () => {};
+
   return (
-    <CardComponents>
-      <div className="card initialCard">
-        <div className="projectImg">
-          {/* 이미지 쿠가해야함 */}
-          {projectImg.length > 0 && <img src={projectImg} alt="woodone" />}
+    <>
+      <CardComponents>
+        <div className="card initialCard">
+          <div className="projectImg">
+            {/* 이미지 쿠가해야함 */}
+            {projectImg.length > 0 && <img src={projectImg} alt="woodone" />}
+          </div>
+          <div className="projectName">{projectName}</div>
+          <div className="desLineKor projectDes">{projectDes}</div>
         </div>
-        <div className="projectName">{projectName}</div>
-        <div className="desLineKor projectDes">{projectDes}</div>
-      </div>
-      <div className="card hoveredCard">
-        <div className="projectName">{projectName}</div>
-        <div className="moreBtn">
-          <MoreBtn>자세히보기</MoreBtn>
-          {siteLink.length > 0 ? (
-            <Link to={siteLink} target="_Blank">
-              <MoreBtn>사이트 이동</MoreBtn>
-            </Link>
-          ) : (
-            <Link to={gitLink} target="_Blank">
-              <MoreBtn>Github</MoreBtn>
-            </Link>
-          )}
+        <div className="card hoveredCard">
+          <div className="projectName">{projectName}</div>
+          <div className="moreBtn">
+            <MoreBtn onClick={handleToggleModal}>자세히보기</MoreBtn>
+            {siteLink.length > 0 ? (
+              <Link to={siteLink} target="_Blank">
+                <MoreBtn>사이트 이동</MoreBtn>
+              </Link>
+            ) : (
+              <Link to={gitLink} target="_Blank">
+                <MoreBtn>Github</MoreBtn>
+              </Link>
+            )}
+          </div>
         </div>
-      </div>
-    </CardComponents>
+      </CardComponents>
+    </>
   );
 };
 

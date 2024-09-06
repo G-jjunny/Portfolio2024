@@ -45,8 +45,8 @@ const TechDescription: React.FC<Description> = ({
     <>
       <div className={styles.TechName}>{techName}</div>
       <ul className={styles.TechDes}>
-        {techDes.map((item) => (
-          <li>{item}</li>
+        {techDes.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
       <div className={styles.techNode}>

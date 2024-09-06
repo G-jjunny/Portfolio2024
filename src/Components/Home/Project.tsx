@@ -7,6 +7,7 @@ import Portfolio from "../../Assets/Images/ProjectImg/Portfolio.png";
 import SMU from "../../Assets/Images/ProjectImg/SMUMemory.png";
 import Poketmon from "../../Assets/Images/ProjectImg/Poketmon.png";
 import Starbucks from "../../Assets/Images/ProjectImg/starbucks.png";
+import ProjectModal from "../ProjectModal";
 
 const Project: React.FC = () => {
   return (

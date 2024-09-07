@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { openModal } from "../../Redux/modalSlice";
-import ProjectModal from "../ProjectModal";
 
 const CardComponents = styled.div`
   position: relative;
@@ -93,6 +92,7 @@ interface CardTypes {
   projectImg: string;
   siteLink: string;
   gitLink: string;
+  skills: string[];
 }
 
 const ProjectCard: React.FC<CardTypes> = ({
@@ -101,12 +101,20 @@ const ProjectCard: React.FC<CardTypes> = ({
   projectImg,
   siteLink,
   gitLink,
+  skills,
 }) => {
   // modal 상태 관련
   const dispatch = useDispatch();
   const handleToggleModal = () => {
     dispatch(
-      openModal({ projectName, projectDes, projectImg, siteLink, gitLink })
+      openModal({
+        projectName,
+        projectDes,
+        projectImg,
+        siteLink,
+        gitLink,
+        skills,
+      })
     );
   };
 

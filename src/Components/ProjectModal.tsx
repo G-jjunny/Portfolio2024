@@ -3,11 +3,19 @@ import Modal from "react-modal";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../Redux/modalSlice";
 import styles from "../Styles/ComponentsModule/ProjectModal.module.scss";
+import { Icon } from "@iconify-icon/react";
 
 const ProjectModal: React.FC = () => {
   // Redux에서 모달 상태 가져오기
-  const { isOpen, projectName, projectDes, projectImg, siteLink, gitLink } =
-    useSelector((state: any) => state.modal);
+  const {
+    isOpen,
+    projectName,
+    projectDes,
+    projectImg,
+    siteLink,
+    gitLink,
+    skills,
+  } = useSelector((state: any) => state.modal);
 
   const dispatch = useDispatch();
   // 모달이 열렸을 때 body 스크롤 막기
@@ -20,7 +28,6 @@ const ProjectModal: React.FC = () => {
     document.body.style.overflow = "auto";
     dispatch(closeModal());
   };
-
   return (
     <Modal
       isOpen={isOpen}
@@ -36,17 +43,36 @@ const ProjectModal: React.FC = () => {
         },
         content: {
           padding: 0,
+          width: "100%",
+          backgroundColor: "transparent",
+          display: "flex",
+          justifyContent: "center",
           maxHeight: "80vh",
-          overflowY: "scroll",
           position: "static",
           border: "none",
-          overflow: "visible",
         },
       }}
     >
       <div className={styles.container}>
-        asdfasdfsd
-        <div className={styles.closeBtn}>asdfasdf</div>
+        <div className={styles.projectName}>{projectName}</div>
+        <div className="desLineKor">{projectDes}</div>
+        <div>사용기술 및 언어</div>
+        <div className={styles.skills}>
+          {skills.map((skill: string, index: string) => (
+            <div key={index}>{skill}</div>
+          ))}
+        </div>
+        <div className={styles.sideBtn}>
+          <div className={styles.close} onClick={handleRequestClose}>
+            <Icon
+              icon="material-symbols:close-rounded"
+              style={{ fontWeight: "700" }}
+            />
+          </div>
+          <div className={styles.close}>
+            <Icon icon="pajamas:link" />
+          </div>
+        </div>
       </div>
     </Modal>
   );

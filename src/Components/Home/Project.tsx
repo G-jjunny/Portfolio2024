@@ -22,6 +22,7 @@ const Project: React.FC = () => {
           할 수 있는 사이트입니다."
           siteLink=""
           gitLink="https://github.com/G-jjunny/Sky_Maestro"
+          skills={["HTML", "TypeScript"]}
         />
         <ProjectCard
           projectImg={WoodOne}
@@ -29,6 +30,7 @@ const Project: React.FC = () => {
           projectDes="원목마루 시공 및 컨설팅 회사의 사이트입니다."
           siteLink="https://woodone.co.kr/"
           gitLink=""
+          skills={[""]}
         />
         <ProjectCard
           projectImg={Portfolio}
@@ -36,6 +38,7 @@ const Project: React.FC = () => {
           projectDes="저만의 포트폴리오 사이트입니다."
           siteLink=""
           gitLink="https://github.com/G-jjunny/Portfolio2024"
+          skills={[""]}
         />
         <ProjectCard
           projectImg={Poketmon}
@@ -43,6 +46,7 @@ const Project: React.FC = () => {
           projectDes="포켓몬 API를 이용한 포켓몬 도감 사이트입니다."
           siteLink=""
           gitLink="https://github.com/G-jjunny/PokemonApp"
+          skills={[""]}
         />
         <ProjectCard
           projectImg={Starbucks}
@@ -50,6 +54,7 @@ const Project: React.FC = () => {
           projectDes="퍼블리싱 능력을 키우기 위한 스타벅스 클론코딩입니다."
           siteLink="https://velvety-selkie-fca6b5.netlify.app/"
           gitLink=""
+          skills={[""]}
         />
         <ProjectCard
           projectImg={SinkwangCar2}
@@ -57,6 +62,7 @@ const Project: React.FC = () => {
           projectDes="학부시절 산학협력 프로젝트로 진행한 신광자동차 공업소 사이트 제작 프로젝트입니다."
           siteLink="http://sinkwangcar.com/"
           gitLink=""
+          skills={[""]}
         />
         <ProjectCard
           projectImg={SMU}
@@ -64,6 +70,7 @@ const Project: React.FC = () => {
           projectDes="학부시절 진행한 프로젝트로 클롤링을 통한 데이터수집 및 R을 사용해 시각화한 데이터를 보여주는 사이트"
           siteLink="https://inquisitive-pudding-73ca93.netlify.app/"
           gitLink=""
+          skills={[""]}
         />
       </div>
     </div>

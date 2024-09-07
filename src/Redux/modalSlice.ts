@@ -7,6 +7,7 @@ interface ModalState {
   projectImg: string;
   siteLink: string;
   gitLink: string;
+  skills: string[];
 }
 
 const initialState: ModalState = {
@@ -16,6 +17,7 @@ const initialState: ModalState = {
   projectImg: "",
   siteLink: "",
   gitLink: "",
+  skills: [],
 };
 
 const modalSlice = createSlice({
@@ -29,6 +31,7 @@ const modalSlice = createSlice({
       state.projectImg = action.payload.projectImg;
       state.siteLink = action.payload.siteLink;
       state.gitLink = action.payload.gitLink;
+      state.skills = action.payload.skills;
     },
     closeModal: (state) => {
       state.isOpen = false;
@@ -37,6 +40,7 @@ const modalSlice = createSlice({
       state.projectImg = "";
       state.siteLink = "";
       state.gitLink = "";
+      state.skills = [];
     },
   },
 });

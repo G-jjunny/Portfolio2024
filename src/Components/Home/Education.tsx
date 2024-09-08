@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../Styles/ComponentsModule/Education.module.scss";
 import styled from "styled-components";
 import { Icon } from "@iconify-icon/react";
+import Skill from "../Skill";
 
 const StyledCard = styled.div`
   width: 100%;
@@ -47,47 +48,47 @@ const StyledCard = styled.div`
     gap: 10px;
   }
 `;
-const Skill = styled.div`
-  padding: 15px;
-  background-color: var(--black);
-  font-size: 32px;
-  border-radius: 10%;
-  position: relative;
-  overflow: hidden;
-  .blur {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 10%;
-    background-color: var(--black);
-    opacity: 0;
-    transition: all.3s;
-    color: var(--light);
-    text-align: center;
-    &:hover {
-      opacity: 1;
-      filter: blur(20px);
-    }
-  }
-  .skillName {
-    position: absolute;
-    text-align: center;
-    align-content: center;
-    top: 0;
-    left: 0;
-    font-size: 12px;
-    width: 100%;
-    height: 100%;
-    color: var(--white);
-    opacity: 0;
-    transition: all.3s;
-    &:hover {
-      opacity: 1;
-    }
-  }
-`;
+// const Skill = styled.div`
+//   padding: 15px;
+//   background-color: var(--black);
+//   font-size: 32px;
+//   border-radius: 10%;
+//   position: relative;
+//   overflow: hidden;
+//   .blur {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     border-radius: 10%;
+//     background-color: var(--black);
+//     opacity: 0;
+//     transition: all.3s;
+//     color: var(--light);
+//     text-align: center;
+//     &:hover {
+//       opacity: 1;
+//       filter: blur(20px);
+//     }
+//   }
+//   .skillName {
+//     position: absolute;
+//     text-align: center;
+//     align-content: center;
+//     top: 0;
+//     left: 0;
+//     font-size: 12px;
+//     width: 100%;
+//     height: 100%;
+//     color: var(--white);
+//     opacity: 0;
+//     transition: all.3s;
+//     &:hover {
+//       opacity: 1;
+//     }
+//   }
+// `;
 
 interface CardType {
   day: string;
@@ -122,13 +123,7 @@ const Edu: React.FC<CardType> = ({
       </ul>
       <div className="skills">
         {skills.map((i, index) => (
-          <Skill key={index}>
-            <Icon icon={`devicon:${i.toLowerCase()}`} />
-            <div className="skillName">
-              <div className="blur"></div>
-              {i}
-            </div>
-          </Skill>
+          <Skill skill={i} key={index} />
         ))}
       </div>
     </StyledCard>

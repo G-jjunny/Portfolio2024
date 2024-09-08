@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../Redux/modalSlice";
 import styles from "../Styles/ComponentsModule/ProjectModal.module.scss";
 import { Icon } from "@iconify-icon/react";
+import Skill from "./Skill";
 
 const ProjectModal: React.FC = () => {
   // Redux에서 모달 상태 가져오기
@@ -56,10 +57,10 @@ const ProjectModal: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.projectName}>{projectName}</div>
         <div className="desLineKor">{projectDes}</div>
-        <div>사용기술 및 언어</div>
+        <div className={styles.category}>사용기술 및 언어</div>
         <div className={styles.skills}>
           {skills.map((skill: string, index: string) => (
-            <div key={index}>{skill}</div>
+            <Skill skill={skill} key={index} />
           ))}
         </div>
         <div className={styles.sideBtn}>

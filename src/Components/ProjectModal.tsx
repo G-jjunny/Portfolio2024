@@ -38,41 +38,40 @@ const ProjectModal: React.FC = () => {
       style={{
         overlay: {
           backgroundColor: "rgba(52,58,64,0.7)",
-          justifyContent: "center",
-          alignItems: "center",
-          display: "flex",
         },
         content: {
           padding: 0,
-          width: "100%",
+          inset: "20px 200px",
           backgroundColor: "transparent",
-          display: "flex",
-          justifyContent: "center",
-          maxHeight: "80vh",
-          position: "static",
           border: "none",
+          overflow: "visible",
         },
       }}
     >
       <div className={styles.container}>
-        <div className={styles.projectName}>{projectName}</div>
-        <div className="desLineKor">{projectDes}</div>
-        <div className={styles.category}>사용기술 및 언어</div>
-        <div className={styles.skills}>
-          {skills.map((skill: string, index: string) => (
-            <Skill skill={skill} key={index} />
-          ))}
+        <div className={styles.header}>
+          <div className={styles.headerContents}>
+            <div className={styles.projectName}>{projectName}</div>
+            <div className="desLineKor">{projectDes}</div>
+            <img src={projectImg} alt="project" className={styles.projectImg} />
+          </div>
+        </div>
+        <div className={styles.contents}>
+          <div className={styles.context}>사용기술 및 언어</div>
+          <div className={styles.skills}>
+            {skills.map((item: string, index: string) => (
+              <Skill key={index} skill={item} />
+            ))}
+          </div>
+          <div className={styles.context}>주요기능 및 특징</div>
+        </div>
+      </div>
+      <div className={styles.controller}>
+        <div className={styles.sideBtn}>
+          <Icon icon="ic:baseline-close" />
         </div>
         <div className={styles.sideBtn}>
-          <div className={styles.close} onClick={handleRequestClose}>
-            <Icon
-              icon="material-symbols:close-rounded"
-              style={{ fontWeight: "700" }}
-            />
-          </div>
-          <div className={styles.close}>
-            <Icon icon="pajamas:link" />
-          </div>
+          <Icon icon="lucide:link" />
         </div>
       </div>
     </Modal>

@@ -67,7 +67,7 @@ const ProjectModal: React.FC = () => {
         </div>
       </div>
       <div className={styles.controller}>
-        <div className={styles.sideBtn}>
+        <div className={styles.sideBtn} onClick={handleRequestClose}>
           <Icon icon="ic:baseline-close" />
         </div>
         <div className={styles.sideBtn}>

@@ -93,6 +93,7 @@ interface CardTypes {
   siteLink: string;
   gitLink: string;
   skills: string[];
+  description: string;
 }
 
 const ProjectCard: React.FC<CardTypes> = ({
@@ -102,6 +103,7 @@ const ProjectCard: React.FC<CardTypes> = ({
   siteLink,
   gitLink,
   skills,
+  description,
 }) => {
   // modal 상태 관련
   const dispatch = useDispatch();
@@ -114,6 +116,7 @@ const ProjectCard: React.FC<CardTypes> = ({
         siteLink,
         gitLink,
         skills,
+        description,
       })
     );
   };

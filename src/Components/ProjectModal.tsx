@@ -5,6 +5,7 @@ import { closeModal } from "../Redux/modalSlice";
 import styles from "../Styles/ComponentsModule/ProjectModal.module.scss";
 import { Icon } from "@iconify-icon/react";
 import Skill from "./Skill";
+import { Link } from "react-router-dom";
 
 const ProjectModal: React.FC = () => {
   // Redux에서 모달 상태 가져오기
@@ -16,6 +17,7 @@ const ProjectModal: React.FC = () => {
     siteLink,
     gitLink,
     skills,
+    description,
   } = useSelector((state: any) => state.modal);
 
   const dispatch = useDispatch();
@@ -53,7 +55,15 @@ const ProjectModal: React.FC = () => {
           <div className={styles.headerContents}>
             <div className={styles.projectName}>{projectName}</div>
             <div className="desLineKor">{projectDes}</div>
-            <img src={projectImg} alt="project" className={styles.projectImg} />
+            {projectImg ? (
+              <img
+                src={projectImg}
+                alt="project"
+                className={styles.projectImg}
+              />
+            ) : (
+              <div></div>
+            )}
           </div>
         </div>
         <div className={styles.contents}>
@@ -64,6 +74,7 @@ const ProjectModal: React.FC = () => {
             ))}
           </div>
           <div className={styles.context}>주요기능 및 특징</div>
+          <div className={styles.des}>{description}</div>
         </div>
       </div>
       <div className={styles.controller}>
@@ -71,7 +82,9 @@ const ProjectModal: React.FC = () => {
           <Icon icon="ic:baseline-close" />
         </div>
         <div className={styles.sideBtn}>
-          <Icon icon="lucide:link" />
+          <Link to={siteLink.length > 0 ? siteLink : gitLink} target="_Blank">
+            <Icon icon="lucide:link" />
+          </Link>
         </div>
       </div>
     </Modal>

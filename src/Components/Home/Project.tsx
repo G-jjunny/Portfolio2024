@@ -23,6 +23,7 @@ const Project: React.FC = () => {
           siteLink=""
           gitLink="https://github.com/G-jjunny/Sky_Maestro"
           skills={["React", "TypeScript", "NodeJS", "MongoDB", "Postman"]}
+          description={""}
         />
         <ProjectCard
           projectImg={WoodOne}
@@ -31,6 +32,9 @@ const Project: React.FC = () => {
           siteLink="https://woodone.co.kr/"
           gitLink=""
           skills={["React", "Sass", "Figma"]}
+          description={
+            '원목마루 시공 및 컨설팅 회사 "우드원"의 사이트입니다. React를 기반으로 제작하였으며, Sass와 styled-component로 스타일링 하였습니다. 구성으로는 회사의 소개 및 마루의 샘플 사진을 볼 수 있고 이메일 문의 기능을 구현하였습니다.'
+          }
         />
         <ProjectCard
           projectImg={Portfolio}
@@ -39,6 +43,9 @@ const Project: React.FC = () => {
           siteLink=""
           gitLink="https://github.com/G-jjunny/Portfolio2024"
           skills={["React", "TypeScript", "Redux", "Sass", "Figma"]}
+          description={
+            "React와 TypeScript를 사용하여 만든 저만의 포트폴리오 입니다. Figma로 기본 UI구성을 만들면서 작업을 하였고 상태관리로는 Redux-toolkit을 이용하였습니다."
+          }
         />
         <ProjectCard
           projectImg={Poketmon}
@@ -47,6 +54,9 @@ const Project: React.FC = () => {
           siteLink=""
           gitLink="https://github.com/G-jjunny/PokemonApp"
           skills={["React", "ViteJS", "TypeScript", "Redux"]}
+          description={
+            "평소 좋아하던 포켓몬에 관한 API를 알게되어 Redux학습을 위해 만든 사이트입니다. API에서 제공하는 포켓몬의 정보를 Redux를 사용해 상태 관리를 하여 도감을 만들고 Google 로그인 기능을 포함하였습니다."
+          }
         />
         <ProjectCard
           projectImg={Starbucks}
@@ -55,6 +65,9 @@ const Project: React.FC = () => {
           siteLink="https://velvety-selkie-fca6b5.netlify.app/"
           gitLink=""
           skills={["HTML5", "CSS3", "JavaScript"]}
+          description={
+            "퍼블리싱 능력을 기르기 위한 스타벅스 클론코딩으로 HTML과 CSS, JavaScript로 작업을 하였으면 메인 페이지 및 로그인 페이지를 구현하였습니다."
+          }
         />
         <ProjectCard
           projectImg={SinkwangCar2}
@@ -63,6 +76,7 @@ const Project: React.FC = () => {
           siteLink="http://sinkwangcar.com/"
           gitLink=""
           skills={["React"]}
+          description={`학부시절 산학협력 프로젝트이며 신광자동차 공업소 홍보 사이트로 현재 서비스중인 사이트입니다. React와 styled-components 등으로 구현하였으며 기능으로는 email.js를 이용한 이메일 전송 기능을 구현하였습니다.`}
         />
         <ProjectCard
           projectImg={SMU}
@@ -71,6 +85,9 @@ const Project: React.FC = () => {
           siteLink="https://inquisitive-pudding-73ca93.netlify.app/"
           gitLink=""
           skills={["HTML5", "CSS3", "JavaScript", "Bootstrap", "R"]}
+          description={
+            "세명대학교 캡스톤 디자인 경연대회 프로젝트로 텍스톰을 이용한 데이터 수집, R을 이용해 데이터를 분석 및 시각화한 데이터를 이용하여 년도 별로 정리해 만든 사이트 입니다."
+          }
         />
       </div>
     </div>

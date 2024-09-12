@@ -5,6 +5,7 @@ import useMousePosition from "../Hooks/useMousePosition";
 
 const Layout = (props: { children: React.ReactNode }) => {
   const { xy, xyHandler } = useMousePosition();
+
   return (
     <div onMouseMove={xyHandler}>
       <div

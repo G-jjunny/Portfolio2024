@@ -2,14 +2,14 @@ import React from "react";
 import styles from "../../Styles/PagesModule/OutTro.module.scss";
 
 const OutTro = () => {
-  const handleToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // const handleToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
   return (
     <div className={styles.container}>
-      <div className={styles.controller}>
+      {/* <div className={styles.controller}>
         <div className={styles.handleBtn} onClick={handleToTop}></div>
-      </div>
+      </div> */}
       <div className={styles.contents}>
         <div className={styles.outTroHeader}>
           <div className={styles.thanks}>Thank You</div>

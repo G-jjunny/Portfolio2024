@@ -53,7 +53,11 @@ const TechDescription: React.FC<Description> = ({
         {nodes.map((item, index) => (
           <TechNode key={index}>
             <div className="icon">
-              <Icon icon={`devicon:${item.toLowerCase()}`} />
+              {item === "StyledComponents" ? (
+                <Icon icon={`skill-icons:${item.toLowerCase()}`} />
+              ) : (
+                <Icon icon={`devicon:${item.toLowerCase()}`} />
+              )}
             </div>
             <div className="iconName">{item.split("-")[0]}</div>
           </TechNode>

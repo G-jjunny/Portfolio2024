@@ -14,3 +14,25 @@
   transition: all 0.2s ease-out;
   z-index: 1001;
 }
+.controller {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sideBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--second);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+.sideBtn:hover {
+  background-color: var(--mid);
+}

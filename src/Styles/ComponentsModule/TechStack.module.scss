@@ -2,7 +2,8 @@
   text-align: start;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  // overflow: scroll;
 }
 .headline {
   font-family: "Playfair Display", system-ui;

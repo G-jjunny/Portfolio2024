@@ -8,6 +8,7 @@ import SMU from "../../Assets/Images/ProjectImg/SMUMemory.png";
 import Poketmon from "../../Assets/Images/ProjectImg/Poketmon.png";
 import Starbucks from "../../Assets/Images/ProjectImg/starbucks.png";
 import ProjectModal from "../ProjectModal";
+import SkyMaestro from "../../Assets/Images/ProjectImg/Sky-maestro.png";
 
 const Project: React.FC = () => {
   return (
@@ -16,14 +17,16 @@ const Project: React.FC = () => {
       <div className={styles.contents}>
         <ProjectModal />
         <ProjectCard
-          projectImg={""}
+          projectImg={SkyMaestro}
           projectName="Sky-Maestro"
           projectDes="공공 API 데이터를 이용한 항공편 검색, 환율 정보 및 공항 서비스를 확인
           할 수 있는 사이트입니다."
           siteLink=""
           gitLink="https://github.com/G-jjunny/Sky_Maestro"
           skills={["React", "TypeScript", "NodeJS", "MongoDB", "Postman"]}
-          description={""}
+          description={
+            "엘리스 팀 프로젝트로 공공 API를 이용한 인천공항 항공편 조회, 편의시설 및 국가별 환율을 확인 할 수 있는 서비스입니다. 공공API 프록시 설정 및 팀원과의 협업을 경험 할 수 있었던 프로젝트입니다. 프로젝트 종료 이후에 보완해야 할 부분을 지속적으로 업데이트 할 예정입니다."
+          }
         />
         <ProjectCard
           projectImg={WoodOne}

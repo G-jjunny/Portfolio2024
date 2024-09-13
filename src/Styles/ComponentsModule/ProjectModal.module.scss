@@ -1,6 +1,7 @@
 .container {
   font-family: "Noto Sans KR", system-ui;
   height: 100%;
+  // overflow-y: scroll;
 }
 .header {
   // height: 300px;
@@ -71,9 +72,9 @@
 }
 
 .controller {
-  position: absolute;
-  top: 0;
-  right: -70px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;

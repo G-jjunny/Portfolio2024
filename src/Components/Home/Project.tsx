@@ -56,9 +56,9 @@ const Project: React.FC = () => {
           projectDes="포켓몬 API를 이용한 포켓몬 도감 사이트입니다."
           siteLink=""
           gitLink="https://github.com/G-jjunny/PokemonApp"
-          skills={["React", "ViteJS", "TypeScript", "Redux"]}
+          skills={["React", "ViteJS", "TypeScript", "Redux", "TailwindCss"]}
           description={
-            "평소 좋아하던 포켓몬에 관한 API를 알게되어 Redux학습을 위해 만든 사이트입니다. API에서 제공하는 포켓몬의 정보를 Redux를 사용해 상태 관리를 하여 도감을 만들고 Google 로그인 기능을 포함하였습니다."
+            "평소 좋아하던 포켓몬에 관한 API를 알게되어 Redux학습을 위해 만든 사이트입니다. TypeScript기반 React + Vite를 사용하여 프로젝트를 진행하였으며 API에서 제공하는 포켓몬의 정보를 Redux를 사용해 상태 관리를 하여 도감을 만들고 Google 로그인 기능을 포함하였습니다."
           }
         />
         <ProjectCard

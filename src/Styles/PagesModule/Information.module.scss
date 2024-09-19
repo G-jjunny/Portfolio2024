@@ -28,9 +28,21 @@
   flex-direction: column;
   gap: 20px;
   cursor: pointer;
+  li {
+    // padding-right: 20px;
+  }
   .active {
     color: var(--white);
+    position: relative;
   }
+  // .active::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 10px;
+  //   height: 100%;
+  //   background-color: var(--white);
+  //   right: 0;
+  // }
 }
 .contents {
   width: 100%;

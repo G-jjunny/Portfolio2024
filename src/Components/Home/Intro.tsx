@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../Styles/PagesModule/Intro.module.scss";
 import styled from "styled-components";
 import bg from "../../Assets/Images/bg-dark-sky.jpg";
+import { motion } from "framer-motion";
 
 const StyledIntro = styled.div`
   width: 100vw;
@@ -19,8 +20,28 @@ const Intro = () => {
   return (
     <StyledIntro>
       <div className={styles.contents}>
-        <div className={styles.headline}>Front-End Developer</div>
-        <div className={styles.desline}>Welcom to my Portfolio</div>
+        <div
+          className={styles.headline}
+          // initial={{ opacity: 0, y: 20 }}
+          // whileInView={{
+          //   opacity: 1,
+          //   y: 0,
+          //   transition: { delay: 0.1 },
+          // }}
+        >
+          Front-End Developer
+        </div>
+        <div
+          className={styles.desline}
+          // initial={{ opacity: 0, y: 20 }}
+          // whileInView={{
+          //   opacity: 1,
+          //   y: 0,
+          //   transition: { delay: 0.5 },
+          // }}
+        >
+          Welcom to my Portfolio
+        </div>
         {/* <div className={styles.desline}>프론트엔드 개발자 정경준입니다.</div> */}
       </div>
     </StyledIntro>

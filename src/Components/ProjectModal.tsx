@@ -47,7 +47,7 @@ const ProjectModal: React.FC = () => {
           backgroundColor: "transparent",
           border: "none",
           // overflow: "visible",
-          overflow: "scroll",
+          overflow: "auto",
         },
       }}
     >

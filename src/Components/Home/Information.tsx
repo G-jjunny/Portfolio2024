@@ -8,12 +8,10 @@ import Profile from "./Profile";
 const Information = () => {
   const [activeSection, setActiveSection] = useState<string>("Main");
 
-  // Section references for each section in the contents
   const profileRef = useRef<HTMLDivElement>(null);
   const projectRef = useRef<HTMLDivElement>(null);
   const educationRef = useRef<HTMLDivElement>(null);
 
-  // Scroll to specific section when the corresponding nav item is clicked
   const handleNavClick = (section: string) => {
     let targetRef;
     switch (section) {
@@ -52,7 +50,7 @@ const Information = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     );
 
     sections.forEach((section) => {

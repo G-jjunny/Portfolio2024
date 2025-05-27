@@ -134,6 +134,15 @@ const Education = () => {
   return (
     <div className={styles.container}>
       <div className={styles.contents}>
+        {/* <Edu
+          day="2025.01 ~ 2025.02"
+          groupName="엘리스"
+          groupDes={[""]}
+          contents={[
+            "백엔드 팀원들과 팀단위 프로젝트를 기획부터 배포까지 전반적인 프로세스를 진행",
+          ]}
+          skills={["HTML5", "TYPESCRIPT", "TAILWINDCSS"]}
+        /> */}
         <Edu
           day="2024.04 ~ 2024.08"
           groupName="엘리스"

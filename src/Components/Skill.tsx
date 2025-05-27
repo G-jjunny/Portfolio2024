@@ -46,9 +46,10 @@ const SkillConponent = styled.div`
 
 interface skillTypes {
   skill: string;
+  size?: number;
 }
 
-const Skill: React.FC<skillTypes> = ({ skill }) => {
+const Skill: React.FC<skillTypes> = ({ skill, size }) => {
   return (
     <SkillConponent>
       <Icon icon={`devicon:${skill.toLowerCase()}`} />

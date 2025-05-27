@@ -90,6 +90,7 @@ const TechStack: React.FC = () => {
           "Postman",
           "StyledComponents",
           "Sass",
+          "TailwindCss",
           "Bootstrap",
           "MaterialUI",
           "antDesign",
@@ -102,7 +103,7 @@ const TechStack: React.FC = () => {
           "코드 에디터로는 Visual Studio Code를 활용하여 작업을 하고있으며,",
           "협업 도구로는 Git을 기반으로한 GitHub플랫폼을 사용하여 프로젝트 관리를 하고있습니다.",
         ]}
-        nodes={["Figma", "vscode", "Netlify"]}
+        nodes={["Figma", "vscode", "Git", "Github", "Netlify"]}
       />
     </div>
   );

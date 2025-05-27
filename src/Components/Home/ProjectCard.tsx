@@ -90,10 +90,10 @@ interface CardTypes {
   projectName: string;
   projectDes: string;
   projectImg: string;
-  siteLink: string;
-  gitLink: string;
+  siteLink?: string;
+  gitLink?: string;
   skills: string[];
-  description: string;
+  description: string[];
 }
 
 const ProjectCard: React.FC<CardTypes> = ({
@@ -136,14 +136,16 @@ const ProjectCard: React.FC<CardTypes> = ({
           <div className="projectName">{projectName}</div>
           <div className="moreBtn">
             <MoreBtn onClick={handleToggleModal}>자세히보기</MoreBtn>
-            {siteLink.length > 0 ? (
+            {siteLink && siteLink.length > 0 ? (
               <Link to={siteLink} target="_Blank">
                 <MoreBtn>사이트 이동</MoreBtn>
               </Link>
             ) : (
-              <Link to={gitLink} target="_Blank">
-                <MoreBtn>Github</MoreBtn>
-              </Link>
+              gitLink && (
+                <Link to={gitLink} target="_Blank">
+                  <MoreBtn>Github</MoreBtn>
+                </Link>
+              )
             )}
           </div>
         </div>
